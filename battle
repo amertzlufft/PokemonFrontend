@@ -57,6 +57,7 @@
        
     </div>
     <button onclick="startBattle()">Start Battle</button>
+    <button onclick="goToHomePage()">Back to Home</button>
     <div id="battle-result" class="dice-result"></div>
 
     <script>
@@ -87,6 +88,11 @@
             const battleResultElement = document.getElementById("battle-result");
             battleResultElement.textContent = `You rolled a ${diceResult}! ${selectedPokemon} dealt ${damageDealt} damage.`;
 
+        }
+
+         function goToHomePage() {
+           
+            alert('Home');
         }
     </script>
 </body>
