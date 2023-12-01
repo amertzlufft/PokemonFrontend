@@ -50,10 +50,10 @@
 <body>
     <h1>Pokemon Battle</h1>
     <div class="pokemon-selector">
-        <img src="file:///C:/wamp64/www/pokemon/PokemonFrontend-master/images/bulbasour.png" alt="001" onclick="selectPokemon('bulbasour')">
-        <img src="file:///C:/wamp64/www/pokemon/PokemonFrontend-master/images/charmander.png" alt="004" onclick="selectPokemon('charmander')">
-        <img src="file:///C:/wamp64/www/pokemon/PokemonFrontend-master/images/squirtle.png" alt="007" onclick="selectPokemon('squirtle')">
-        <img src="file:///C:/wamp64/www/pokemon/PokemonFrontend-master/images/pikachu.png" alt="025" onclick="selectPokemon('pikachu')">
+        <img src="../images/001.png" alt="001" onclick="selectPokemon('bulbasour')">
+        <img src="../images/004.png" alt="004" onclick="selectPokemon('charmander')">
+        <img src="../images/007.png" alt="007" onclick="selectPokemon('squirtle')">
+        <img src="../images/025.png" alt="025" onclick="selectPokemon('pikachu')">
        
     </div>
     <button onclick="startBattle()">Start Battle</button>
