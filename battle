@@ -8,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
-            background-image: url('C:/wamp64/www/pokemon/PokemonFrontend-master/images/background.jpeg');
+            background-image: url('../images/background.jpeg');
             background-size: cover;
             background-position: center;
             text-align: center;
@@ -108,12 +108,12 @@
     <button class="top-left" onclick="goToHomePage()">Back to Home</button>
     <h1>Pokemon Battle</h1>
     <div class="pokemon-selector">
-        <img src="file:///C:/wamp64/www/pokemon/PokemonFrontend-master/images/bulbasour.png" alt="001" onclick="selectPokemon('bulbasour')">
-        <img src="file:///C:/wamp64/www/pokemon/PokemonFrontend-master/images/charmander.png" alt="004" onclick="selectPokemon('charmander')">
-        <img src="file:///C:/wamp64/www/pokemon/PokemonFrontend-master/images/squirtle.png" alt="007" onclick="selectPokemon('squirtle')">
-        <img src="file:///C:/wamp64/www/pokemon/PokemonFrontend-master/images/pikachu.png" alt="025" onclick="selectPokemon('pikachu')">
+        <img src="../images/001.png" alt="Bulbasaur" onclick="selectPokemon('bulbasour')">
+        <img src="../images/004.png" alt="Charmander" onclick="selectPokemon('charmander')">
+        <img src="../images/007.png" alt="Squirtle" onclick="selectPokemon('squirtle')">
+        <img src="../images/025.png" alt="Pikachu" onclick="selectPokemon('pikachu')">
     </div>
-    <img src="file:///C:/wamp64/www/pokemon/PokemonFrontend-master/images/Meowth.webp" alt="Bad Guy" class="bad-guy">
+    <img src="../images/meowth.png" alt="Bad Guy" class="bad-guy">
     <button onclick="startBattle()">Start Battle</button>
     <div class="dice-result"></div>
     <div class="health-bars">
@@ -153,17 +153,15 @@
             opponentHealth = Math.max(0, opponentHealth - damageDealt);
             playerHealth = Math.max(0, playerHealth);
 
-            // Update health bars
+          
             document.getElementById("player-health").style.width = `${playerHealth}%`;
             document.getElementById("opponent-health").style.width = `${opponentHealth}%`;
 
-            // Check if battle is over
             if (playerHealth === 0 || opponentHealth === 0) {
                 alert('Battle Over!');
                 resetBattle();
             }
 
-            // Display battle result
             displayBattleResult(diceResult, damageDealt);
         }
 
@@ -173,12 +171,12 @@
         }
 
         function resetBattle() {
-            // Reset selected Pokemon and health
+        
             selectedPokemon = '';
             playerHealth = 100;
             opponentHealth = 100;
 
-            // Reset UI
+         
             const pokemonImages = document.querySelectorAll('.pokemon-selector img');
             pokemonImages.forEach(image => {
                 image.style.border = '2px solid transparent';
@@ -188,7 +186,7 @@
         }
 
         function goToHomePage() {
-            // Redirect to index.html
+         
             window.location.href = 'index.html';
         }
     </script>
